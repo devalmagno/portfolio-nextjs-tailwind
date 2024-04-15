@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #121214;
+  --primary: #8257e5;
+  --primary-darker: #28203e;
+  --primary-hover: #9466ff;
+  --primary-border: #6833e4;
+  --primary-shape: #734bd1;
+  --primary-light: #996dff;
+
+  --text: #a8a8b3;
+  --base-text: #c4c4cc;
+
+  --green: #13a10e;
+
+  /* bash */
+  --t-black: #0c0c0c;
+  --t-purple: #821791;
+  --t-blue: #265981;
+  --t-yellow: #c19c00;
+}

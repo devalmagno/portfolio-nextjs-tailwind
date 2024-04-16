@@ -13,19 +13,17 @@ export default function Card({ project }: Props) {
   return (
     <Link href={`projects/${project.id}`} className="w-80 h bg-dark-300 text-white rounded-xl overflow-hidden shadow-md select-none cursor-pointer hover:scale-105 hover:shadow-2xl transition duration-300">
       <div className="max-h-64 overflow-hidden">
-        <Image
+        <img
           src={project.images[0]}
           alt={project.title}
           className="object-cover"
-          width={320}
-          height={256}
         />
       </div>
       <div className="py-5 px-9 flex flex-col gap-4">
         <p className="font-bold text-xl">{project.title}</p>
         <div className='max-h-44 overflow-hidden'>
           <p className="font-semibold">About</p>
-          <span className='text-title-100'>{project.description}</span>
+          <span className='text-title-100 text-xs'>{project.description}</span>
         </div>
         <div className='flex gap-2 flex-wrap'>
           {project.skillsUsed.map(e => (

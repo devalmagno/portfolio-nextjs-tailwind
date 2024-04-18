@@ -39,7 +39,7 @@ export default function Project({ params }: { params: { id: string } }) {
   return (
     <div className="w-full py-8 px-4">
       <div className="bg-dark-300 rounded-xl flex flex-col overflow-hidden shadow-md">
-        <div className={`w-full m-auto relative group flex justify-center sm:max-h-[640px] sm:h-auto ${imageExtended ? "" : "max-h-80 overflow-hidden"}`}>
+        <div className={`w-full m-auto relative group flex justify-center sm:max-h-[500px] sm:h-auto ${imageExtended ? "" : "max-h-80 overflow-hidden"}`}>
           <img src={project.images[currentIndex]}
             className={`z-10 bg-center bg-cover duration-500 ${imageExtended ? 'object-contain' : 'object-cover'} sm:object-contain`}
           />
@@ -70,7 +70,7 @@ export default function Project({ params }: { params: { id: string } }) {
           <strong>Skills used</strong>
           <div className='flex gap-2 flex-wrap'>
             {project.skillsUsed.map(e => (
-              <div className='bg-gray-400 w-max px-2 py-1 text-xs rounded-md shadow-md text-gray-100'>
+              <div key={e} className='bg-gray-400 w-max px-2 py-1 text-xs rounded-md shadow-md text-gray-100'>
                 {e}
               </div>
             ))}
@@ -78,10 +78,10 @@ export default function Project({ params }: { params: { id: string } }) {
         </div>
         <div className='bg-dark-400 py-5 flex items-center justify-center gap-6 text-xl text-icon-100'>
           {project.platforms.map(e => {
-            if (e === "Android") return <FaAndroid />;
-            if (e === "Ios") return <FaApple />;
-            if (e === "Web") return <FaChrome />;
-            if (e === "Mobile") return <FaMobile />;
+            if (e === "Android") return <FaAndroid key={e} />;
+            if (e === "Ios") return <FaApple key={e}/>;
+            if (e === "Web") return <FaChrome key={e}/>;
+            if (e === "Mobile") return <FaMobile key={e}/>;
           })}
         </div>
       </div>

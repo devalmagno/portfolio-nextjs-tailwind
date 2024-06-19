@@ -22,3 +22,7 @@
   --t-blue: #265981;
   --t-yellow: #c19c00;
 }
+
+* {
+  outline: none;
+}

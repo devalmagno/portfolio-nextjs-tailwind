@@ -4,7 +4,7 @@ import {
     FaHome,
     FaInfoCircle
 } from 'react-icons/fa';
-import { IoAppsSharp } from 'react-icons/io5'
+import { IoAppsSharp, IoMail } from 'react-icons/io5'
 import MenuItem from './MenuItem';
 import NavbarItem from './NavbarItem';
 
@@ -15,7 +15,8 @@ export default function Sidebar() {
             <NavbarItem Icon={IoAppsSharp} address='/projects' />
             <MenuItem Icon={FaGithubSquare} address='https://github.com/devalmagno' />
             <MenuItem Icon={FaLinkedin} address='https://www.linkedin.com/in/devalmagno/' />
-            <NavbarItem Icon={FaInfoCircle} address='/about-me' />
+            {/* <NavbarItem Icon={IoMail} address='/contact' />
+            <NavbarItem Icon={FaInfoCircle} address='/about-me' /> */}
         </div>
     );
 }

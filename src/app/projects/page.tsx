@@ -1,8 +1,13 @@
 import Card from '@/components/Card';
 import { getProjects } from '@/utils/getProjects';
+import { Metadata } from 'next';
 import React from 'react'
 
 export const revalidate = 14400;
+
+export const metadata: Metadata = {
+  title: "Projects",
+}
 
 export default async function Projects() {
   const projectList = await getProjects();

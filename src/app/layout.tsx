@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-screen bg-gradient-to-b from-primary-700 from-10% to-dark-200 ${roboto400.className}`}>
+      <body className={`h-screen bg-gradient-to-b from-primary-700 from-10% to-dark-200 ${roboto400.className} overflow-hidden`}>
         <Navbar />
         <div className="pb-16 sm:ml-16">
           {children}

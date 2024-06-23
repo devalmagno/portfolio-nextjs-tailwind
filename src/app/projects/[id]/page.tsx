@@ -47,8 +47,8 @@ export default function Project({ params }: { params: { id: string } }) {
     );
 
   return (
-    <div className="w-full py-8 px-4">
-      <div className="bg-dark-300 rounded-xl flex flex-col overflow-hidden shadow-md">
+    <div className="h-screen w-full py-8 px-4 overflow-y-scroll">
+      <div className="bg-dark-300 rounded-xl flex flex-col overflow-hidden shadow-md mb-12">
         <div
           className={`w-full m-auto relative group flex justify-center sm:max-h-[500px] sm:h-auto ${
             imageExtended ? "" : "max-h-80 overflow-hidden"
